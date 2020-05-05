@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 void FindNumber()
@@ -7,36 +7,24 @@ void FindNumber()
     {
         if (i * 32 > 10000)
         {
-            cout << i * 32 << endl;
+         printf("%d\n",i*32);
             break;
         }
 
     }
 
 }
-int FindNumber2()
-{
-    for (int i = 1; ; i++)
-    {
-        if (i * 32 > 10000)
-        {
-            return i * 32;
-            break;
-        }
 
-    }
-
-}
 void PascalTriangle()
 {
     int riadky;
     int koeficient;
-    cout << "Zadaj pocet riadkov"<<endl;
-    cin >> riadky;
+    printf("Zadaj pocet riadkov\n");
+    scanf_s("%d",&riadky);
     for (int i = 0; i < riadky; i++)
     {
         for (int medzera = 1; medzera <= riadky - i; medzera++)
-            cout << "  ";
+             printf("  ");
 
         for (int j = 0; j <= i; j++)
         {
@@ -45,16 +33,15 @@ void PascalTriangle()
             else
                 koeficient = koeficient * (i - j + 1) / j;
 
-            cout << koeficient << "   ";
+             printf("%d   ", koeficient);
         }
-        cout << endl;
+        printf("\n");
     }
 }
 
 int main()
 {
     FindNumber();
-    cout << FindNumber2()<<endl;
     PascalTriangle();
 }
 
